@@ -10,6 +10,7 @@ public class VenueController {
 
     public void addEvent(String eventName) {
         // MVC step 2: the Controller receives user input from the View.
+        // It forwards the request to the Model so the data changes in one place.
         this.model.addEvent(eventName);
     }
 
@@ -18,6 +19,8 @@ public class VenueController {
     }
 
     public void createBooking(String customerName, Event event, SeatRecord seatRecord) {
+        // MVC step 2: the Controller handles the booking request from the View.
+        // Validation and storage are left to the Model.
         this.model.createBooking(customerName, event, seatRecord);
     }
 

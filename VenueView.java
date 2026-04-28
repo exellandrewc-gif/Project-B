@@ -222,7 +222,8 @@ public class VenueView {
 
         Button submitButton = new Button("Submit");
         submitButton.setOnAction(event -> {
-            // MVC step 1: the View receives the button click and passes input to the Controller.
+            // MVC step 1: the View receives the button click and reads the user's input.
+            // It does not create the Event itself; it passes the request to the Controller.
             this.controller.addEvent(eventNameField.getText());
             stage.close();
         });
@@ -256,8 +257,10 @@ public class VenueView {
 
         Button submitButton = new Button("Create Booking");
         submitButton.setOnAction(event -> {
+            // MVC step 1: the View collects the selected Event, Seat and customer name.
             Event selectedEvent = eventTable.getSelectionModel().getSelectedItem();
             SeatRecord selectedSeat = seatTable.getSelectionModel().getSelectedItem();
+            // MVC step 2 begins when the View sends those values to the Controller.
             this.controller.createBooking(customerNameField.getText(), selectedEvent, selectedSeat);
             stage.close();
         });

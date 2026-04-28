@@ -162,9 +162,11 @@ public class VenueModel {
         Booking booking = new Booking(bookingId, event.getId(), new String[] { seatRecord.getSeatId() }, cleanName);
 
         // MVC step 3: the Model updates the domain objects and observable lists.
+        // The View is refreshed because its TableView controls observe these lists.
         getVenue().bookings.put(bookingId, booking);
         seat.assignBooking(bookingId, event.getId());
 
+        // MVC step 4: refreshing the Model's observable data updates the GUI tables.
         refreshData();
         setStatus("Booking created for " + cleanName + " in seat " + seatRecord.getSeatId() + ".");
     }
