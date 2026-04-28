@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch VenueManagerApp",
+            "request": "launch",
+            "mainClass": "VenueManagerApp",
+            "cwd": "${workspaceFolder}",
+            "vmArgs": "--module-path \"/Users/andrew/IIPRO002/Project/Project B Materials/javafx-sdk-26/lib\" --add-modules javafx.controls"
+        }
+    ]
+}
