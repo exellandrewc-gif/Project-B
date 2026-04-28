@@ -24,13 +24,3 @@ This project uses JavaFX material from weeks 7 to 9:
 - `TableView` and `TableColumn`
 
 Week 10 graphics, animation, sprites, and shape classes are intentionally not used.
-
-## Run
-
-Use `VenueManagerApp` as the main class. The JavaFX SDK is stored with the class materials and VS Code is configured in `.vscode`.
-
-The launch configuration uses:
-
-```text
---module-path "/Users/andrew/IIPRO002/Project/Project B Materials/javafx-sdk-26/lib" --add-modules javafx.controls
-```
