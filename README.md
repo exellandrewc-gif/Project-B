@@ -22,5 +22,3 @@ This project uses JavaFX material from weeks 7 to 9:
 - modal windows
 - `ObservableList`
 - `TableView` and `TableColumn`
-
-Week 10 graphics, animation, sprites, and shape classes are intentionally not used.
